@@ -1,0 +1,268 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;  /* Added modern font */
+    background-color: #f0f1f6;  /* Soft background color */
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Header */
+header {
+    background-color: #1e3a8a;  /* Blue background */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.8rem;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: transform 0.3s ease;
+}
+
+header h1:hover {
+    transform: scale(1.1);  /* Hover effect on the title */
+}
+
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e3a8a;  /* Rich blue color */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);  /* Deeper shadow for a more elevated look */
+    padding: 10px 0;
+    position: sticky;  /* Makes the navigation bar stay on top while scrolling */
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: #f4f4f9;  /* Light text color */
+    text-decoration: none;
+    padding: 16px 25px;
+    font-size: 1.1rem;  /* Slightly larger font for readability */
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+    border-radius: 6px;  /* Rounded corners for the links */
+}
+
+nav a:hover {
+    background-color: #4c6eb1;  /* Lighter blue background on hover */
+    color: #fff;  /* White text on hover */
+    transform: translateY(-5px);  /* Subtle lift effect */
+}
+
+nav a:active {
+    background-color: #365f8f;  /* Darker shade when active */
+    transform: translateY(0);  /* Reset the translateY effect */
+}
+
+/* Optional: Active link indication */
+nav a.active {
+    background-color: #3c5994;  /* Highlight the active link */
+    color: #fff;
+}
+
+/* Product List */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+/* Product Card */
+.product-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: scale(1);
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-card .content {
+    padding: 20px;
+}
+
+.product-card .content h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.product-card .content p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.product-card .content .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1e3a8a;  /* Blue price color */
+    transition: color 0.3s ease;
+}
+
+.product-card:hover .content .price {
+    color: #4c6eb1;  /* Lighter blue on hover */
+}
+
+/* Product Create/Edit Form */
+.form-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.form-container:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container input, 
+.form-container textarea, 
+.form-container button {
+    margin-bottom: 18px;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.form-container input:focus, 
+.form-container textarea:focus {
+    border-color: #1e3a8a;
+    outline: none;
+    background-color: #f4f8ff;
+}
+
+.form-container button {
+    background-color: #1e3a8a;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-container button:hover {
+    background-color: #4c6eb1;
+    transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #1e3a8a;
+    color: white;
+    margin-top: 60px;
+    font-size: 1rem;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-list {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .form-container {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    .product-card .content h3 {
+        font-size: 1.3rem;
+    }
+
+    .product-card .content p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .product-card .content h3 {
+        font-size: 1.2rem;
+    }
+
+    .product-card .content p {
+        font-size: 0.9rem;
+    }
+
+    .product-card img {
+        height: 180px;
+    }
+}
